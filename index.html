@@ -1,56 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="color.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Pret Wear Collection - Ladies Luxury Pret | Nomi Ansari</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="https://www.nomiansari.com.pk/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <div class="container">
-    <div class="mood">
-      <h1>Calculator</h1>
-      <button id="theme-toggle">
-        <img id="sun" src="sun.svg" alt="Sun Icon" style="display: none;">
-        <img id="moon" src="moon.svg" alt="Moon Icon">
-      </button>
-    </div>
-    <div class="main">
-      <input type="text" name="text" placeholder="0">
-    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="C:\Users\LENOVO\OneDrive\Desktop\Project\Index.html"><img src="logo.png" alt="Nomi Ansari Logo"></a>
+            </div>
+            <nav class="navber">
+                <ul>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Haute%20Muse%20SS%202025/Haute%20Muse%20SS%202025.html">Haute Muse S/S 2025</a></li>
+                    <li><a href="index.html">Luxury Pret</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Bubbles%20-%20Kids%20Festive/index.html">Bubbles - Kids Festive</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Threads%20of%20Hope/Threads%20of%20hope.html">Threads of Hope</a></li>
+                    <div class="dropdown_menu">
+                        <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Ready%20to%20ship/ready%20to%20ship.html">Ready to ship</a></li>
+                        <div class="dropdown_content">
+                            <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Womanswear/woman.html">WomansWear</a></li>
+                        </div>
+                    </div>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/wedding/wedding.html">Wedding</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Occasion%20Wear/Occasion.html">Occasion Wear</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Nomi%20and%20I/Nomi.html">Nomi And I</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/Images/index.html">MANSWEAR</a></li>
+                </ul>
+            </nav>
 
-    <div class="row">
-      <button class="button bg-red">Ac</button>
-      <button class="button">⌫</button>
-      <button class="button">%</button>
-      <button class="button bg-blue">÷</button>
-    </div>
-    <div class="row">
-      <button class="button">7</button>
-      <button class="button">8</button>
-      <button class="button">9</button>
-      <button class="button bg-blue">*</button>
-    </div>
-    <div class="row">
-      <button class="button">4</button>
-      <button class="button">5</button>
-      <button class="button">6</button>
-      <button class="button bg-blue">-</button>
-    </div>
-    <div class="row">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button bg-blue">+</button>
-    </div>
-    <div class="row">
-      <button class="button bt">0</button>
-      <button class="button">.</button>
-      <button class="button border">=</button>
-    </div>
-  </div>
+            <div class="icons">
+                <div class="currancyselected">
+                    <select name="customerCurrancy" id="currancy">
+                        <option value="https://www.nomiansari.com.pk/changecurrency/12?returnUrl=%2F">PKR</option>
+                        <option selected="selected"
+                            value="https://www.nomiansari.com.pk/changecurrency/1?returnUrl=%2F">USD
+                        </option>
+                        <option value="https://www.nomiansari.com.pk/changecurrency/3?returnUrl=%2F">GBP</option>
+                        <option value="https://www.nomiansari.com.pk/changecurrency/6?returnUrl=%2F">EUR</option>
+                    </select>
+                </div>
+                <div class="images">
+                    <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <i class="fa-solid fa-magnifying-glass" onclick="form_open()"></i>
+                    <div id="sideber_M">
+                        <div class="btn" onclick="form_close()"></div>
+                        <div class="search_1">Search </div>
+                        <form class="form_2" action="" method="get">
+                            <div>
+                                <input type="text" placeholder="Search Store" name="search" id="search"
+                                    autocomplete="off">
+                                <input type="submit" value="Search" class="close_btn">
+                            </div>
+                        </form>
+                    </div>
 
-  <script src="extra.js"></script>
+
+                    <i class="fa-solid fa-user" onclick="w3_open()"></i>
+                    <div id="sideber">
+                        <div class="btn1">
+                            <p>Returning Customer</p>
+                            <div id="btn" onclick="sideber_close()"></div>
+                        </div>
+                        <div class="form">
+                            <form action="">
+                                <div class="form_item">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                                <div class="form_item">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password" name="password">
+                                </div>
+                                <div class="form_checkbox">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <label for="remember" id="label">Remember me</label>
+                                </div>
+                                <div class="form_btn">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+            </div>
+        </div>
+        <div class="second_menu">
+            <ul>
+                <li>
+                    <a href="C:\Users\LENOVO\OneDrive\Desktop\Project\Index.html">Home
+                        <span> > </span>
+                    </a>
+                </li>
+                <li> Luxury Pret</li>
+            </ul>
+        </div>
+    </header>
+    <div class="product_sorting">
+        <span>Sort by</span>
+        <select aria-label="Select product sort order" id="products-orderby" name="products-orderby"
+    onchange="sortProducts(this.value);" class="sortOptionsDropDown">
+            <option selected="selected" value="0">Position</option>
+            <option value="5">Name: A to Z</option>
+            <option value="6">Name: Z to A</option>
+            <option value="10">Price: Low to High</option>
+            <option value="11">Price: High to Low</option>
+        </select>
+    </div>
+    <section>
+        <div class="filter" onclick="toggleFilter()" id="openNav">
+            <strong class="filter-title">
+                <span>Refine Search</span>
+            </strong>
+        </div>
+    </section>
+    <section id="side">
+        <div class="sidebar">
+            <div class="title">
+                <a class="toggleControl">price range</a>
+                <a class="clear">clear</a>
+                <div class="before" onclick="close_btn()"></div>
+            </div>
+        </div>
+    </section>
+<section id="main">
+    <div class="grid_images">
+        <div class="grid_item">
+            <a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/card/card.html"  title="Sun Kissed">
+                <img height="600" width="418" src="1.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="2.jpeg" alt="">
+                </div>
+                <span class="boxbtn" title="Show Detail of Sun Kissed">View Detail</span>
+                <span class="span_item">Sun Kissed</span>
+                <span class="call_for">$110.00</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card2/card2.html"  title="ALOHA RED">
+                <img height="600" width="418" src="3.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="4.jpeg" alt="">
+                </div>
+                <span class="boxbtn" title="Show Detail of Aloha Red">View Detail</span>
+                <span class="span_item">ALOHA RED</span>
+                <span class="call_for">$110.00</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card3/card3.html"  title="Glory">
+                <img height="600" width="418" src="5.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="6.jpeg" alt="">
+                </div>
+                <span class="boxbtn" title="Show Detail of Glory">View Detail</span>
+               <span class="span_item">GLORY</span>
+                <span class="call_for">$100.00</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/card/Card3/card3.html"  title="Rosey">
+                <img height="600" width="418" src="7.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="8.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Rosey</span>
+                <span class="call_for">90,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/card/Card4/card3.html"  title="Rani Bagh">
+                <img height="600" width="418" src="9.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="10.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Rani Bagh</span>
+                <span class="call_for">95,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="file:///C:/Users/LENOVO/OneDrive/Desktop/Project/card/Card5/card3.html"  title="Enchanted">
+                <img height="600" width="418" src="11.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="12.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Enchanted</span>
+                <span class="call_for">90,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card7/card3.html"  title="Allure">
+                <img height="600" width="418" src="13.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="14.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Allure</span>
+                <span class="call_for">95,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card8/card3.html"  title="Supreme">
+                <img height="600" width="418" src="15.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="16.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Supreme</span>
+                <span class="call_for">80,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card9/card3.html"  title="Forest">
+                <img height="600" width="418" src="17.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="18.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Forest</span>
+                <span class="call_for">95,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card10/card3.html"  title="NA-EE25-38">
+                <img height="600" width="418" src="19.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="20.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">NA-EE25-38</span>
+                <span class="call_for">75,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card11/card3.html"  title="Iznik">
+                <img height="600" width="418" src="21.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="22.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Iznik</span>
+                <span class="call_for">95,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card12/card3.html"  title="NA-EE25-40">
+                <img height="600" width="418" src="23.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="24.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">NA-EE25-40</span>
+                <span class="call_for">70,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card13/card3.html"  title="NA-EE25-41">
+                <img height="600" width="418" src="25.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="26.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">NA-EE25-41</span>
+                <span class="call_for">185,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card14/card3.html"  title="Aqua">
+                <img height="600" width="418" src="27.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="28.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Aqua</span>
+                <span class="call_for">125,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card15/card3.html"  title="Rossini">
+                <img height="600" width="418" src="29.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="30.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+               <span class="span_item">Rossini</span>
+                <span class="call_for">190,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card16/card3.html"  title="NA-EE25-17">
+                <img height="600" width="418" src="31.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="32.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">NA-EE25-17</span>
+                <span class="call_for">220.000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card17/card3.html"  title="Sundae">
+                <img height="600" width="418" src="33.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="34.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Sundae</span>
+                <span class="call_for">150,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card18/card3.html"  title="Savanna">
+                <img height="600" width="418" src="35.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="36.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Savanna</span>
+                <span class="call_for">70,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card19/card3.html"  title="Margarita">
+                <img height="600" width="418" src="37.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="38.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Margarita</span>
+                <span class="call_for">95,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card20/card3.html"  title="NA-EE25-23">
+                <img height="600" width="418" src="39.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="40.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">NA-EE25-23</span>
+                <span class="call_for">125.000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card21/card3.html"  title="Cocktail">
+                <img height="600" width="418" src="41.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="42.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Cocktail</span>
+                <span class="call_for">80,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card22/card3.html"  title="Spring soirée">
+                <img height="600" width="418" src="43.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="44.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Spring soirée</span>
+                <span class="call_for">70,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card23/card3.html"  title="Luminous">
+                <img height="600" width="418" src="45.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="46.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Luminous</span>
+                <span class="call_for">90,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card24/card3.html"  title="Aster">
+                <img height="600" width="418" src="47.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="48.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Aster</span>
+                <span class="call_for">175,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card25/card3.html"  title="Twilight">
+                <img height="600" width="418" src="49.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="50.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Twilight</span>
+                <span class="call_for">165,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card26/card3.html"  title="After Swim">
+                <img height="600" width="418" src="51.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="52.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">After Swim</span>
+                <span class="call_for">150,000</span>
+            </a>
+        </div>
+        <div class="grid_item">
+            <a href="card27/card3.html"  title="Mystique">
+                <img height="600" width="418" src="53.jpeg" alt="">
+                <div class="hover_image">
+                    <img src="54.jpeg" alt="">
+                </div>
+                <span class="boxbtn">View Detail</span>
+                <span class="span_item">Mystique</span>
+                <span class="call_for">140,000</span>
+            </a>
+        </div>
+    </div>
+</section>
+ <footer>
+    <div class="footer_container">
+      <div class="logo_icon">
+        <div class="footer_logo">
+          <a href="#">
+            <img src="logo.png" alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://www.facebook.com/NomiAnsariOfficial/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/nomiansariofficial/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/nomiansariofficial/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@nomiansariofficial"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer_links">
+        <ul>
+          <li><a href="#" title="Campaigns">Campaigns</a></li>
+          <li><a href="">Runway Report</a></li>
+          <li><a href="">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer_links sec">
+        <ul>
+          <li><a href="">Return & Exchange</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+          <li><a href="">Payment Method</a></li>
+          <li><a href="">Privacy notice</a></li>
+          <li><a href="">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <div class="p">
+          <p>subscribe to our newsletter</p>
+        </div>
+        <div class="input">
+          <input type="email" placeholder="Enter YOUR EMAIL HERE...">
+          <input type="button" value="SUBSCRIBE" id="subscribe">
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
